@@ -1,0 +1,11 @@
+body {
+    background-color: #4b3621;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.title {
+    font-family: Helvetica, sans-serif;
+    font-size: 1000%;
+    letter-spacing: -0.5rem;
+}
