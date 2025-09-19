@@ -1,16 +1,14 @@
-html, body {
-  padding: 0;
-  margin: 0;
-}
-
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
 body {
-    background-color: #4b3621;
+    background-color: #483c32;
     color: white;
     mix-blend-mode: difference;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .header-flex {
@@ -26,7 +24,6 @@ body {
 }
 
 .header-link {
-    font-family: Helvetica, sans-serif;
     font-size: 18px;
     color: white;
     text-decoration: none;
@@ -39,13 +36,11 @@ body {
 }
 
 .title {
-    font-family: Helvetica, sans-serif;
     font-size: 13vw;
     letter-spacing: -1vw;
 }
 
 .title-desc {
-    font-family: Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 200;
     max-width: 700px;
@@ -53,6 +48,36 @@ body {
     line-height: 1.5;
 }
 
+.footer {
+    width: 100%;
+}
+
+.carousel-track {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.carousel-slides {
+    display: flex;
+    animation: scroll 15s linear infinite;
+}
+
+.carousel-text {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+
+    font-size: 6vw;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 @media (max-width: 900px) {
     .header-flex {
@@ -76,12 +101,4 @@ body {
         max-width: 100%;
         margin-top: 5vw;
     }
-}
-
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
 }
