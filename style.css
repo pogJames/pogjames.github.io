@@ -6,6 +6,17 @@ body {
 
 .title {
     font-family: Helvetica, sans-serif;
-    font-size: 1000%;
-    letter-spacing: -0.5rem;
+    font-size: 13vw;
+    letter-spacing: -1vw;
+}
+
+.title-desc {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    max-width: 700px;
+    margin-top: -5vw;
+}
+
+.left {
+    text-align: left;
 }
