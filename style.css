@@ -1,3 +1,7 @@
+:root{
+      --font-size: 20px;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
@@ -11,6 +15,16 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .header-flex {
     padding: 0 30px;
     display: flex;
@@ -18,17 +32,49 @@ body {
     align-items: center;
 }
 
-.nav-items {
+.nav {
     display: flex;
     justify-content: space-between;
 }
 
+.nav-items {
+    display: flex;
+    list-style: none;
+}
+
 .header-link {
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-    
-    padding: 20px 15px;
+    display: inline-block;
+    font-size: var(--font-size);
+    padding: 20px;
+}
+
+.text-container {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-text {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.header-text.top {
+    transform: translateY(0%);
+}
+
+.header-text.bot {
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+}
+
+.header-link:hover .header-text.top {
+    transform: translateY(-100%);
+}
+
+.header-link:hover .header-text.bot {
+    transform: translateY(0%);
 }
 
 .title-container {
@@ -41,10 +87,11 @@ body {
 }
 
 .title-desc {
-    font-size: 18px;
+    font-size: var(--font-size);
     font-weight: 200;
     max-width: 700px;
     margin-top: 4vw;
+    margin-left: 2vw;
     line-height: 1.5;
 }
 
@@ -59,15 +106,16 @@ body {
 
 .carousel-slides {
     display: flex;
-    animation: scroll 15s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 
-.carousel-text {
+.email {
     width: 100%;
     display: flex;
     flex-shrink: 0;
 
-    font-size: 6vw;
+    font-size: 7vw;
+    text-decoration: underline;
 }
 
 @keyframes scroll {
