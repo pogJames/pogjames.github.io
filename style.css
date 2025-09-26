@@ -8,15 +8,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 body {
     background-color: #483c32;
-    color: white;
-    mix-blend-mode: difference;
+    color: #b7c3cd;
     font-family: Helvetica, sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
 
 a {
-    color: white;
+    color: #b7c3cd;
     text-decoration: none;
 }
 
@@ -149,4 +148,9 @@ ul {
         max-width: 100%;
         margin-top: 5vw;
     }
+}
+
+.profile-picture {
+    width: 30%;
+    display: block;
 }
