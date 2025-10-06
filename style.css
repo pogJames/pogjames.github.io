@@ -31,14 +31,9 @@ ul {
     align-items: center;
 }
 
-.nav {
+.nav-container {
     display: flex;
     justify-content: space-between;
-}
-
-.nav-items {
-    display: flex;
-    list-style: none;
 }
 
 .header-link {
@@ -166,6 +161,18 @@ ul {
     padding: 3vw 3vw 3vw 0;
 }
 
+.social-container {
+    display: flex;
+    justify-content: end;
+    gap: 5vh;
+    align-items: center;
+    padding: 5vh;
+}
+
+.social-svg {
+    width: 15vh;
+}
+
 @media (orientation: portrait) or (width < 900px){
     .about-container {
         flex-direction: column;
@@ -173,10 +180,18 @@ ul {
     .profile-picture {
         width: 88vw;
         height: 88vw;
-        padding: 0 6vw;
+        padding: 6vw 6vw 0 6vw;
         object-fit: cover;
     }
     .about-the-container {
         padding: 6vw;
+    }
+    .social-container {
+        gap: 5vw;
+        padding: 5vw;
+    }
+
+    .social-svg {
+        width: 10vw;
     }
 }
