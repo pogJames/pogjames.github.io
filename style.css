@@ -31,6 +31,27 @@ ul {
     align-items: center;
 }
 
+.logo-link {
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+.logo-link:hover {
+    animation: pop 0.5s ease forwards;
+}
+
+@keyframes pop {
+    0%   { transform: scale(1, 1); }
+    60%  { transform: scale(1.4, 0.8); }
+    100% { transform: scale(1.2, 1.2); }
+}
+
+.logo-svg {
+    fill: currentColor;
+    width: 35px;
+    height: 35px;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -108,6 +129,7 @@ ul {
     flex-shrink: 0;
 
     font-size: 7vw;
+    font-weight: bold;
     text-decoration: underline;
 }
 
@@ -130,6 +152,13 @@ ul {
 }
 
 @media (max-width: 500px) {
+    .logo-svg {
+        width: 6vw;
+        height: 6vw;
+    }
+    .logo-link {
+        padding: 3vw 4vw;
+    }
     .header-link {
         font-size: 4vw;
         padding: 4vw 2.5vw;
@@ -170,6 +199,7 @@ ul {
 }
 
 .social-svg {
+    fill: currentColor;
     width: 15vh;
 }
 
@@ -190,7 +220,6 @@ ul {
         gap: 5vw;
         padding: 5vw;
     }
-
     .social-svg {
         width: 10vw;
     }
