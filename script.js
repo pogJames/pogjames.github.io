@@ -6,8 +6,6 @@ const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
     if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        entry.target.classList.remove('to-right', 'to-left'); // Remove hidden and direction classes
-        // Stop observing once it's visible
         observer.unobserve(entry.target);
     }
     });
