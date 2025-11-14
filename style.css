@@ -38,6 +38,11 @@ ul {
     transform: translateX(0);
 }
 
+header {
+    position: sticky;
+    top: 0;
+}
+
 .header-flex {
     padding: 0 30px;
     display: flex;
@@ -133,7 +138,7 @@ ul {
     margin: 45px auto;
     justify-content: space-around;
     text-align: center;
-    height: 80vh;
+    height: 500px;
 }
 
 .history-box {
@@ -193,9 +198,6 @@ ul {
     .title-container{
         padding: 3vw;
     }
-}
-
-@media (max-width: 600px) {
     .logo-svg {
         width: 7vw;
         height: 7vw;
@@ -207,6 +209,9 @@ ul {
         font-size: 4vw;
         padding: 4vw 2.5vw;
     }
+}
+
+@media (max-width: 600px) {
     .title {
         font-size: 17.5vw;
     }
