@@ -15,9 +15,9 @@ const observer = new IntersectionObserver((entries, observer) => {
 hidden_boxes.forEach(hidden_box => observer.observe(hidden_box));
 
 // Add button to switch light/dark mode
-const dark = document.getElementById("toggle-dark");
+const toggledark = document.getElementById("toggle-dark");
 const body = document.body;
 
-dark.addEventListener("click", () => {
+toggledark.addEventListener("click", () => {
     body.classList.toggle("dark");
 });
