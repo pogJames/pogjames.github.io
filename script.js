@@ -17,7 +17,13 @@ hidden_boxes.forEach(hidden_box => observer.observe(hidden_box));
 // Add button to switch light/dark mode
 const toggledark = document.getElementById("toggle-dark");
 const body = document.body;
+const moon = document.getElementById("moon");
+const sun = document.getElementById("sun");
 
 toggledark.addEventListener("click", () => {
     body.classList.toggle("dark");
+
+    const moonIsVisible = moon.style.display !== "none";
+    moon.style.display = moonIsVisible ? "none" : "inline";
+    sun.style.display = moonIsVisible ? "inline" : "none";
 });

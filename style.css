@@ -76,6 +76,19 @@ header {
     height: 40px;
 }
 
+#toggle-dark {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    fill: none;
+    color: inherit;
+}
+
+#sun {
+    display: none;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
