@@ -19,11 +19,20 @@ const toggledark = document.getElementById("toggle-dark");
 const body = document.body;
 const moon = document.getElementById("moon");
 const sun = document.getElementById("sun");
+const theme = localStorage.getItem("pref-theme") || 'dark';
+
+if (theme === "light") {
+    body.classList.toggle("dark");
+    moon.style.display = "none";
+    sun.style.display = "inline";
+    localStorage.setItem("pref-theme", "light");
+}
 
 toggledark.addEventListener("click", () => {
+    // Toggle dark mode
     body.classList.toggle("dark");
-
-    const moonIsVisible = moon.style.display !== "none";
-    moon.style.display = moonIsVisible ? "none" : "inline";
-    sun.style.display = moonIsVisible ? "inline" : "none";
+    const isDark = document.body.classList.contains("dark");
+    moon.style.display = isDark ? "inline" : "none";
+    sun.style.display = isDark ? "none" : "inline";
+    localStorage.setItem("pref-theme", isDark ? "dark" : "light");
 });

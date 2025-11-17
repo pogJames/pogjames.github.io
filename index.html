@@ -28,7 +28,7 @@
         </span>
       </div>
       <div class="nav-container">
-        <a class="header-link" href="/about">
+        <a class="header-link" href="file:///home/jmspl/Documents/github/pogjames.github.io/about.html">
           <span class="text-container">
             <span class="top header-text">About</span>
             <span class="bot header-text">About</span>
@@ -82,5 +82,13 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    const theme = localStorage.getItem("pref-theme");
+    if (theme === "dark") {
+      document.body.classList.add("dark");
+    }else {
+      document.body.classList.remove("dark");
+    }
+  </script>
 </body>
 </html>
