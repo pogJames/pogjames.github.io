@@ -274,7 +274,7 @@ header {
 
 .social-svg {
     fill: currentColor;
-    width: 7vw;
+    width: 6vw;
 }
 
 @media (orientation: portrait) or (width < 900px){
@@ -296,6 +296,7 @@ header {
         padding: 5vw;
     }
     .social-svg {
-        width: 11vw;
+        width: 10vw;
     }
+
 }
