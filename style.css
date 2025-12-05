@@ -263,9 +263,9 @@ header {
 .social-container {
     display: flex;
     justify-content: end;
-    gap: 5vh;
+    gap: 4vh;
     align-items: center;
-    padding: 5vh;
+    padding: 4vh;
 }
 
 .social-link:hover {
@@ -292,11 +292,12 @@ header {
         font-size: 20vw;
     }
     .social-container {
-        gap: 5vw;
-        padding: 5vw;
+        gap: 4vw;
+        padding: 4vw;
     }
     .social-svg {
-        width: 10vw;
+        width: 12vw;
     }
 
 }
+
