@@ -69,11 +69,7 @@ header {
 .home-link {
     padding: 20px;
     font-family: "ZCOOL QingKe HuangYou", sans-serif;
-    font-size: 28px;
-}
-
-.home-link:hover {
-    animation: pop 0.3s ease forwards;
+    font-size: 32px;
 }
 
 @keyframes pop {
@@ -117,10 +113,6 @@ header {
 
 .title-desc.margin {
     margin: 30px;
-}
-
-.footer {
-    width: 100%;
 }
 
 .carousel-track {
