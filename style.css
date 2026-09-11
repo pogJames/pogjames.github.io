@@ -33,16 +33,11 @@ ul {
     padding: 0;
 }
 
+/* start state only — anime.js animates the reveal on scroll */
 .hidden {
     position: relative;
     opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
     transform: translateX(5vw);
-}
-
-.hidden.visible {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .landing {
@@ -80,6 +75,9 @@ header {
 
 .title-container {
     padding: 30px;
+    /* masks the per-char animation: letters vanish at the edges
+       instead of spilling into the sections above and below */
+    overflow: clip;
 }
 
 .title {
@@ -96,12 +94,22 @@ header {
     white-space: nowrap;
 }
 
+/* anime.js splits each name word into .char spans */
+.title.name .char {
+    will-change: transform, opacity;
+}
+
 @media (orientation: portrait) {
     .title.name {
         flex-direction: column;
         align-items: flex-start;
         font-size: 27vw;
         line-height: 0.95;
+    }
+
+    /* not :first-child — anime.js inserts a hidden a11y clone before it */
+    .title.name .name-word.first {
+        margin-left: 20px;
     }
 }
 
@@ -213,7 +221,7 @@ header {
         object-fit: cover;
     }
     .about-paragraph-container .title {
-        font-size: 20vw;
+        font-size: 25vw;
     }
     .social-container {
         gap: 4vw;
