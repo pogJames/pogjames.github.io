@@ -100,8 +100,8 @@ header {
    The padding widens that box for the same reason; the negative margin
    cancels it again so the letter spacing is unchanged. */
 .title.name .char {
-    padding: 0 0.08em;
-    margin: 0 -0.08em;
+    padding: 0 0.25em;
+    margin: 0 -0.25em;
 }
 
 @media (orientation: portrait) {

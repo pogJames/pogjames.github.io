@@ -22,20 +22,33 @@ hidden_boxes.forEach(hidden_box => {
         autoplay: false,
     });
 
+    // Only play while it is still hidden, so crossing the threshold again on a
+    // short scroll back down doesn't replay something already on screen.
+    let armed = true;
+
     // Play it when the bottom of the section reaches the bottom of the viewport.
     onScroll({
         target: section,
         enter: 'bottom bottom',
         sync: false,
-        onEnterForward: () => reveal.restart(),
+        onEnterForward: () => {
+            if (!armed) return;
+            armed = false;
+            reveal.restart();
+        },
     });
 
-    // Re-arm only once the section has scrolled back out of view below the fold,
-    // otherwise it would snap back to hidden while still on screen.
+    // Re-arm once the paragraph itself is back below the fold — not the whole
+    // section, or in portrait it would only re-arm after scrolling past the
+    // image as well. Waiting until it is fully out of view keeps it from
+    // snapping back to hidden while still on screen.
     onScroll({
-        target: section,
+        target: hidden_box,
         sync: false,
-        onLeaveBackward: () => reveal.reset(),
+        onLeaveBackward: () => {
+            armed = true;
+            reveal.reset();
+        },
     });
 });
 
