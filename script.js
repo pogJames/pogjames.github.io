@@ -47,12 +47,13 @@ if (!reducedMotion) {
         .addEffect(({ chars }) => animate(chars, {
             y: [
                 { to: '-110%', duration: 550, ease: 'in(2)' },
-                { to: '110%', duration: 0 },
+                // waits below, still invisible, before rising back into place
+                { to: '110%', duration: 250 },
                 { to: '0%', duration: 650, ease: 'out(3)' },
             ],
             opacity: [
                 { to: 0, duration: 550, ease: 'in(2)' },
-                { to: 0, duration: 0 },
+                { to: 0, duration: 250 },
                 { to: 1, duration: 650, ease: 'out(2)' },
             ],
             delay: stagger(30),

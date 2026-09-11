@@ -94,9 +94,14 @@ header {
     white-space: nowrap;
 }
 
-/* anime.js splits each name word into .char spans */
+/* anime.js splits each name word into .char spans.
+   No will-change here: promoting each char to its own layer makes Safari
+   rasterise it to its box and clip the italic serifs that overhang it.
+   The padding widens that box for the same reason; the negative margin
+   cancels it again so the letter spacing is unchanged. */
 .title.name .char {
-    will-change: transform, opacity;
+    padding: 0 0.08em;
+    margin: 0 -0.08em;
 }
 
 @media (orientation: portrait) {
